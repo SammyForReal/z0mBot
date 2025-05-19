@@ -1,0 +1,7 @@
+version: "3.8"
+services:
+  z0mbot:
+    image: ghcr.io/sammyforreal/z0mbot:latest
+    env_file: .env
+    volumes:
+      - ./saved:./saved
