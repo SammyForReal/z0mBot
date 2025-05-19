@@ -1,7 +1,13 @@
-version: "3.8"
 services:
   z0mbot:
-    image: ghcr.io/sammyforreal/z0mbot:latest
-    env_file: .env
+    image: ghcr.io/sammyforreal/z0mbot:main
+    environment:
+      - COOLDOWN_MINUTES=30
+      - TWITTER_STALKED_USER=NAME
+      - TWITTER_USERNAME=SELF
+      - TWITTER_PASSWORD=SECRET
+      - TWITTER_EMAIL=OPTINOAL_MAIL
+      - DISCORD_TOKEN=TOKEN
+      - DISCORD_CLIENT_ID=CLIENT_ID
     volumes:
-      - ./saved:./saved
+      - ./saved:/app/saved
